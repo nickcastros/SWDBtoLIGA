@@ -1,0 +1,324 @@
+/* Importar fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+
+/* Variáveis via CSS custom properties */
+:root {
+  --primary-color: #FFE81F;
+  --secondary-color: #1B263B;
+  --accent-color: #FF6B35;
+  --background-dark: #0D1117;
+  --background-card: #1C2128;
+  --text-light: #F0F6FC;
+  --text-muted: #8B949E;
+  --success-color: #238636;
+  --error-color: #DA3633;
+}
+
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a2e 50%, #16213e 100%);
+  color: var(--text-light);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Efeito de estrelas no fundo */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: sparkle 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes sparkle {
+  from { transform: translateX(0); }
+  to { transform: translateX(-200px); }
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header com logo Star Wars */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-shadow: 
+    0 0 10px var(--primary-color),
+    0 0 20px rgba(255, 232, 31, 0.5),
+    0 0 30px rgba(255, 232, 31, 0.3);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.header .subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Card principal */
+.converter-card {
+  background: rgba(28, 33, 40, 0.8);
+  border: 2px solid rgba(255, 232, 31, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para inputs */
+.input-group {
+  margin-bottom: 30px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background: rgba(13, 17, 23, 0.8);
+  border: 2px solid rgba(255, 232, 31, 0.3);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-family: 'Exo 2', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.input-group input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 
+    0 0 0 3px rgba(255, 232, 31, 0.2),
+    0 0 20px rgba(255, 232, 31, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Botão com estilo Star Wars */
+.btn-convert {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Orbitron', monospace;
+  background: linear-gradient(45deg, var(--primary-color), #ffd700);
+  color: var(--background-dark);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-convert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-convert:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 25px rgba(255, 232, 31, 0.3),
+    0 0 30px rgba(255, 232, 31, 0.2);
+}
+
+.btn-convert:hover::before {
+  left: 100%;
+}
+
+.btn-convert:active {
+  transform: translateY(-1px);
+}
+
+.btn-convert:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Área de output */
+.output-group {
+  margin-top: 30px;
+}
+
+.output-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.output-group textarea {
+  width: 100%;
+  height: 350px;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  background: rgba(13, 17, 23, 0.9);
+  border: 2px solid rgba(255, 232, 31, 0.3);
+  border-radius: 10px;
+  color: var(--text-light);
+  resize: vertical;
+  min-height: 200px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.output-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.output-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 232, 31, 0.2);
+}
+
+/* Estilo quando há conteúdo */
+.output-group textarea:not(:placeholder-shown) {
+  border-color: var(--success-color);
+}
+
+/* Estados de loading */
+.loading {
+  color: var(--primary-color);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Estados de erro */
+.error {
+  color: var(--error-color);
+  border-color: var(--error-color) !important;
+}
+
+/* Botão de copiar */
+.copy-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: rgba(255, 232, 31, 0.1);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 232, 31, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer .force-text {
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+  
+  .converter-card {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Melhorias extras para mobile */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .btn-convert {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  
+  .output-group textarea {
+    height: 250px;
+  }
+}
