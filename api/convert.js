@@ -32,9 +32,9 @@ export default function handler(req, res) {
             const deckList = json.leader
               .map((leader) => {
                 const count = 1;
-                const name = cardName;
-                const title = title ? ` - ${title}` : "";
-                const number = Number(defaultCardNumber);
+                const name = leader.cardName;
+                const title = leader.title ? ` - ${leader.title}` : "";
+                const number = Number(leader.defaultCardNumber);
                 return `${count} ${name}${title} (${number})`;
               })
               .join("\n");
@@ -42,8 +42,8 @@ export default function handler(req, res) {
             deckList = json.base
               .map((base) => {
                 const count = 1;
-                const name = cardName;
-                const number = Number(defaultCardNumber);
+                const name = base.cardName;
+                const number = Number(base.defaultCardNumber);
                 return `${count} ${name} (${number})`;
               })
               .join("\n");
