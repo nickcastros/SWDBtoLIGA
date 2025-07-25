@@ -1,0 +1,1276 @@
+{
+	"deckId": "jPBaEhWjGmvhm",
+	"authorId": "d3169267-ff2b-4724-b191-01c6ef8024e0",
+	"deckName": "Top 8 - Vader Yellow - actionleaguemat - Copy",
+	"editable": false,
+	"deckFormat": 1,
+	"authorName": "nickcastro",
+	"versionNumber": 1,
+	"displayStatus": 2,
+	"publishDate": null,
+	"likeCount": 0,
+	"likedByUser": false,
+	"leader": {
+		"cardId": 885,
+		"cardName": "Darth Vader",
+		"title": "Victor Squadron Leader",
+		"cost": 6,
+		"aspects": [
+			2,
+			6
+		],
+		"type": 0,
+		"arena": 0,
+		"alternativeDeckMaximum": null,
+		"defaultImagePath": "/cards/JTL/006.png",
+		"defaultExpansionAbbreviation": "JTL",
+		"defaultCardNumber": "006",
+		"defaultRarity": 1
+	},
+	"secondLeader": null,
+	"base": {
+		"cardId": 219,
+		"cardName": "Chopper Base",
+		"title": null,
+		"cost": null,
+		"aspects": [
+			3
+		],
+		"type": 1,
+		"arena": null,
+		"alternativeDeckMaximum": null,
+		"defaultImagePath": "~/cards/SOR/030.png",
+		"defaultExpansionAbbreviation": "SOR",
+		"defaultCardNumber": "030",
+		"defaultRarity": 1
+	},
+	"aspects": [
+		2,
+		3,
+		6
+	],
+	"formattedDescription": "",
+	"shuffledDeck": [
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 149,
+				"cardName": "Seventh Fleet Defender",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/180.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "180",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713442Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 76,
+				"cardName": "Overwhelming Barrage",
+				"title": null,
+				"cost": 5,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/092.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "092",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713437Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 824,
+				"cardName": "Shuttle ST-149",
+				"title": "Under Krennic's Authority",
+				"cost": 4,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/JTL/242.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "242",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713435Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 3,
+			"purpose": 0,
+			"card": {
+				"cardId": 388,
+				"cardName": "Bazine Netal",
+				"title": "Spy for the First Order",
+				"cost": 2,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 0,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/184.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "184",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713444Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 467,
+				"cardName": "Lurking TIE Phantom",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/187.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "187",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713445Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 2,
+			"purpose": 0,
+			"card": {
+				"cardId": 1008,
+				"cardName": "Eager Escort Fighter",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					2
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/112.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "112",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713458Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 624,
+				"cardName": "Geonosis Patrol Fighter",
+				"title": null,
+				"cost": 5,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/215.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "215",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713449Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 1031,
+				"cardName": "Republic Y-Wing",
+				"title": "",
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/212.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "212",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.71344Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 736,
+				"cardName": "Sanctioner's Shuttle",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/213.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "213",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713455Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 145,
+				"cardName": "No Good to Me Dead",
+				"title": null,
+				"cost": 2,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/186.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "186",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713457Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 909,
+				"cardName": "TIE Dagger Vanguard",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/239.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "239",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713463Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 902,
+				"cardName": "Stolen AT-Hauler",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/221.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "221",
+				"defaultRarity": 4
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713446Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 140,
+				"cardName": "Mining Guild TIE Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/206.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "206",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713453Z"
+		},
+		{
+			"id": null,
+			"count": 1,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 888,
+				"cardName": "Wingman Victor Two",
+				"title": "Mauler Mithel",
+				"cost": 2,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 0,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/084.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "084",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713462Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 1,
+			"purpose": 0,
+			"card": {
+				"cardId": 231,
+				"cardName": "Confiscate",
+				"title": null,
+				"cost": 1,
+				"aspects": [],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/262.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "262",
+				"defaultRarity": 5
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713459Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 606,
+				"cardName": "Elite P-38 Starfighter",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/181.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "181",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713452Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 3,
+			"purpose": 0,
+			"card": {
+				"cardId": 442,
+				"cardName": "Swoop Down",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/230.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "230",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713441Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 982,
+				"cardName": "Clone Combat Squadron",
+				"title": "",
+				"cost": 4,
+				"aspects": [
+					2
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/115.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "115",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713454Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 872,
+				"cardName": "First Order TIE Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/JTL/081.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "081",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713461Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 33,
+				"cardName": "TIE/ln Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/225.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "225",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.71345Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 886,
+				"cardName": "Victor Leader",
+				"title": "Leading from the Front",
+				"cost": 3,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/085.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "085",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713438Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 1,
+			"purpose": 0,
+			"card": {
+				"cardId": 53,
+				"cardName": "Waylay",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/226.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "226",
+				"defaultRarity": 5
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713465Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 675,
+				"cardName": "Droid Starfighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/228.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "228",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713448Z"
+		}
+	],
+	"historicalChanges": [
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 675,
+				"cardName": "Droid Starfighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/228.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "228",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713448Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 982,
+				"cardName": "Clone Combat Squadron",
+				"title": "",
+				"cost": 4,
+				"aspects": [
+					2
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/115.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "115",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713455Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 3,
+			"purpose": 0,
+			"card": {
+				"cardId": 388,
+				"cardName": "Bazine Netal",
+				"title": "Spy for the First Order",
+				"cost": 2,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 0,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/184.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "184",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713444Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 624,
+				"cardName": "Geonosis Patrol Fighter",
+				"title": null,
+				"cost": 5,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/215.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "215",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.71345Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 2,
+			"purpose": 0,
+			"card": {
+				"cardId": 1008,
+				"cardName": "Eager Escort Fighter",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					2
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/112.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "112",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713459Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 1031,
+				"cardName": "Republic Y-Wing",
+				"title": "",
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/212.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "212",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.71344Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 140,
+				"cardName": "Mining Guild TIE Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/206.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "206",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713454Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 76,
+				"cardName": "Overwhelming Barrage",
+				"title": null,
+				"cost": 5,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/092.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "092",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713437Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 1,
+			"purpose": 0,
+			"card": {
+				"cardId": 231,
+				"cardName": "Confiscate",
+				"title": null,
+				"cost": 1,
+				"aspects": [],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/262.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "262",
+				"defaultRarity": 5
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.71346Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 149,
+				"cardName": "Seventh Fleet Defender",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/180.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "180",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713443Z"
+		},
+		{
+			"id": null,
+			"count": 0,
+			"sideboardCount": 3,
+			"purpose": 0,
+			"card": {
+				"cardId": 442,
+				"cardName": "Swoop Down",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					3
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/230.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "230",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713442Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 33,
+				"cardName": "TIE/ln Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/225.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "225",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713451Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 736,
+				"cardName": "Sanctioner's Shuttle",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/213.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "213",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713456Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 886,
+				"cardName": "Victor Leader",
+				"title": "Leading from the Front",
+				"cost": 3,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/085.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "085",
+				"defaultRarity": 3
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713439Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 872,
+				"cardName": "First Order TIE Fighter",
+				"title": null,
+				"cost": 1,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/JTL/081.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "081",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713461Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 1,
+			"purpose": 0,
+			"card": {
+				"cardId": 53,
+				"cardName": "Waylay",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/226.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "226",
+				"defaultRarity": 5
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713465Z"
+		},
+		{
+			"id": null,
+			"count": 1,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 888,
+				"cardName": "Wingman Victor Two",
+				"title": "Mauler Mithel",
+				"cost": 2,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 2,
+				"arena": 0,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/084.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "084",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713463Z"
+		},
+		{
+			"id": null,
+			"count": 1,
+			"sideboardCount": 0,
+			"purpose": 1,
+			"card": {
+				"cardId": 885,
+				"cardName": "Darth Vader",
+				"title": "Victor Squadron Leader",
+				"cost": 6,
+				"aspects": [
+					2,
+					6
+				],
+				"type": 0,
+				"arena": 0,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/006.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "006",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713413Z"
+		},
+		{
+			"id": null,
+			"count": 1,
+			"sideboardCount": 0,
+			"purpose": 3,
+			"card": {
+				"cardId": 219,
+				"cardName": "Chopper Base",
+				"title": null,
+				"cost": null,
+				"aspects": [
+					3
+				],
+				"type": 1,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/030.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "030",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713422Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 824,
+				"cardName": "Shuttle ST-149",
+				"title": "Under Krennic's Authority",
+				"cost": 4,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/JTL/242.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "242",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713436Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 902,
+				"cardName": "Stolen AT-Hauler",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					3
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/221.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "221",
+				"defaultRarity": 4
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713447Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 909,
+				"cardName": "TIE Dagger Vanguard",
+				"title": "",
+				"cost": 3,
+				"aspects": [
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "/cards/JTL/239.png",
+				"defaultExpansionAbbreviation": "JTL",
+				"defaultCardNumber": "239",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713464Z"
+		},
+		{
+			"id": null,
+			"count": 2,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 606,
+				"cardName": "Elite P-38 Starfighter",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/TWI/181.png",
+				"defaultExpansionAbbreviation": "TWI",
+				"defaultCardNumber": "181",
+				"defaultRarity": 1
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713452Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 467,
+				"cardName": "Lurking TIE Phantom",
+				"title": null,
+				"cost": 3,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 2,
+				"arena": 1,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SHD/187.png",
+				"defaultExpansionAbbreviation": "SHD",
+				"defaultCardNumber": "187",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713446Z"
+		},
+		{
+			"id": null,
+			"count": 3,
+			"sideboardCount": 0,
+			"purpose": 0,
+			"card": {
+				"cardId": 145,
+				"cardName": "No Good to Me Dead",
+				"title": null,
+				"cost": 2,
+				"aspects": [
+					3,
+					6
+				],
+				"type": 3,
+				"arena": null,
+				"alternativeDeckMaximum": null,
+				"defaultImagePath": "~/cards/SOR/186.png",
+				"defaultExpansionAbbreviation": "SOR",
+				"defaultCardNumber": "186",
+				"defaultRarity": 2
+			},
+			"isDiff": false,
+			"version": 1,
+			"changeDate": "2025-07-24T19:02:40.713457Z"
+		}
+	],
+	"priceDetail": {
+		"price": 92.3200,
+		"url": "https://tcgplayer.pxf.io/rQrNeQ?u=http%3A%2F%2Fstore.tcgplayer.com%2Fmassentry%3Fproductline%3DStar%20Wars%20Unlimited%26c%3D2 Seventh Fleet Defender [SOR]||3 Overwhelming Barrage [SOR]||2 Shuttle ST-149 - Under Krennic's Authority [JTL]||3 Bazine Netal - Spy for the First Order [SHD]||3 Lurking TIE Phantom [SHD]||2 Eager Escort Fighter [JTL]||2 Geonosis Patrol Fighter [TWI]||3 Republic Y-Wing [JTL]||3 Sanctioner's Shuttle [TWI]||3 No Good to Me Dead [SOR]||3 TIE Dagger Vanguard [JTL]||3 Stolen AT-Hauler [JTL]||3 Mining Guild TIE Fighter [SOR]||1 Wingman Victor Two - Mauler Mithel [JTL]||1 Confiscate [SHD]||2 Elite P-38 Starfighter [TWI]||3 Swoop Down [SHD]||3 Clone Combat Squadron [JTL]||3 First Order TIE Fighter [JTL]||3 TIE/ln Fighter [SOR]||3 Victor Leader - Leading from the Front [JTL]||3 Waylay [TWI]||3 Droid Starfighter [TWI]"
+	}
+}

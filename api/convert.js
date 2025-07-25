@@ -31,11 +31,13 @@ export default function handler(req, res) {
 
             // Construir as seções do deck separadamente
             // Leader é um objeto único, não um array
-            const leaderSection = json.leader 
+            const leaderSection = json.leader
               ? (() => {
                   const count = 1;
                   const name = json.leader.cardName;
-                  const title = json.leader.title ? ` - ${json.leader.title}` : "";
+                  const title = json.leader.title
+                    ? ` - ${json.leader.title}`
+                    : "";
                   const number = Number(json.leader.defaultCardNumber);
                   return `${count} ${name}${title} (${number})`;
                 })()
@@ -52,19 +54,22 @@ export default function handler(req, res) {
               : "";
 
             // shuffledDeck é um array
-            const deckSection = json.shuffledDeck
-              ?.filter((card) => card.count > 0)
-              .map((card) => {
-                const count = card.count + (card.sideboardCount || 0);
-                const name = card.card.cardName;
-                const title = card.card.title ? ` - ${card.card.title}` : "";
-                const number = Number(card.card.defaultCardNumber);
-                return `${count} ${name}${title} (${number})`;
-              })
-              .join("\n") || "";
+            const deckSection =
+              json.shuffledDeck
+                ?.filter((card) => card.count > 0 || card.sideboardCount > 0)
+                .map((card) => {
+                  const count = card.count + (card.sideboardCount || 0);
+                  const name = card.card.cardName;
+                  const title = card.card.title ? ` - ${card.card.title}` : "";
+                  const number = Number(card.card.defaultCardNumber);
+                  return `${count} ${name}${title} (${number})`;
+                })
+                .join("\n") || "";
 
             // Combinar todas as seções
-            const sections = [leaderSection, baseSection, deckSection].filter(section => section.length > 0);
+            const sections = [leaderSection, baseSection, deckSection].filter(
+              (section) => section.length > 0
+            );
             const deckList = sections.join("\n");
 
             res.setHeader("Content-Type", "text/plain");
