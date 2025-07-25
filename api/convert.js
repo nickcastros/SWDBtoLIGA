@@ -30,25 +30,28 @@ export default function handler(req, res) {
             const json = JSON.parse(decompressed.toString("utf-8"));
 
             // Construir as seções do deck separadamente
-            const leaderSection = json.leader
-              ?.map((leader) => {
-                const count = 1;
-                const name = leader.cardName;
-                const title = leader.title ? ` - ${leader.title}` : "";
-                const number = Number(leader.defaultCardNumber);
-                return `${count} ${name}${title} (${number})`;
-              })
-              .join("\n") || "";
+            // Leader é um objeto único, não um array
+            const leaderSection = json.leader 
+              ? (() => {
+                  const count = 1;
+                  const name = json.leader.cardName;
+                  const title = json.leader.title ? ` - ${json.leader.title}` : "";
+                  const number = Number(json.leader.defaultCardNumber);
+                  return `${count} ${name}${title} (${number})`;
+                })()
+              : "";
 
+            // Base também é um objeto único, não um array
             const baseSection = json.base
-              ?.map((base) => {
-                const count = 1;
-                const name = base.cardName;
-                const number = Number(base.defaultCardNumber);
-                return `${count} ${name} (${number})`;
-              })
-              .join("\n") || "";
+              ? (() => {
+                  const count = 1;
+                  const name = json.base.cardName;
+                  const number = Number(json.base.defaultCardNumber);
+                  return `${count} ${name} (${number})`;
+                })()
+              : "";
 
+            // shuffledDeck é um array
             const deckSection = json.shuffledDeck
               ?.filter((card) => card.count > 0)
               .map((card) => {
