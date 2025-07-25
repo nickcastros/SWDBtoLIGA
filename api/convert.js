@@ -29,35 +29,40 @@ export default function handler(req, res) {
             const decompressed = brotliDecompressSync(compressed);
             const json = JSON.parse(decompressed.toString("utf-8"));
 
-            const deckList = json.leader
-              .map((leader) => {
+            // Construir as seções do deck separadamente
+            const leaderSection = json.leader
+              ?.map((leader) => {
                 const count = 1;
                 const name = leader.cardName;
                 const title = leader.title ? ` - ${leader.title}` : "";
                 const number = Number(leader.defaultCardNumber);
                 return `${count} ${name}${title} (${number})`;
               })
-              .join("\n");
+              .join("\n") || "";
 
-            deckList = json.base
-              .map((base) => {
+            const baseSection = json.base
+              ?.map((base) => {
                 const count = 1;
                 const name = base.cardName;
                 const number = Number(base.defaultCardNumber);
                 return `${count} ${name} (${number})`;
               })
-              .join("\n");
+              .join("\n") || "";
 
-            deckList += json.shuffledDeck
-              .filter((card) => card.count > 0)
+            const deckSection = json.shuffledDeck
+              ?.filter((card) => card.count > 0)
               .map((card) => {
-                const count = card.count + card.sideboardCount;
+                const count = card.count + (card.sideboardCount || 0);
                 const name = card.card.cardName;
                 const title = card.card.title ? ` - ${card.card.title}` : "";
                 const number = Number(card.card.defaultCardNumber);
                 return `${count} ${name}${title} (${number})`;
               })
-              .join("\n");
+              .join("\n") || "";
+
+            // Combinar todas as seções
+            const sections = [leaderSection, baseSection, deckSection].filter(section => section.length > 0);
+            const deckList = sections.join("\n");
 
             res.setHeader("Content-Type", "text/plain");
             res.send(deckList);
