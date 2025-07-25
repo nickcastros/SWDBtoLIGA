@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor SWUDB</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+      }
+      textarea {
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Conversor de Deck SWUDB</h1>
+    <input type="text" id="deckUrl" placeholder="Cole o link do deck aqui..." />
+    <button onclick="converter()">Converter</button>
+    <textarea
+      id="output"
+      readonly
+      placeholder="Resultado aparecerá aqui..."
+    ></textarea>
+    <script>
+      async function converter() {
+        const url = document.getElementById("deckUrl").value;
+        const output = document.getElementById("output");
+        output.value = "Carregando...";
+        try {
+          const res = await fetch(
+            `/api/convert?deckUrl=${encodeURIComponent(url)}`
+          );
+          //const json = await res.json();
+          const text = await res.text();
+          output.value = text;
+        } catch (err) {
+          output.value = "Erro ao converter o deck";
+        }
+      }
+    </script>
+  </body>
+</html>
