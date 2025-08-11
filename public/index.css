@@ -192,9 +192,15 @@ body::before {
   transform: none;
 }
 
-/* Área de output */
-.output-group {
+/* Área de output - múltiplas seções */
+.output-sections {
   margin-top: 30px;
+  display: grid;
+  gap: 25px;
+}
+
+.output-group {
+  position: relative;
 }
 
 .output-group label {
@@ -203,26 +209,29 @@ body::before {
   font-weight: 600;
   color: var(--primary-color);
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .output-group textarea {
   width: 100%;
-  height: 350px;
-  padding: 20px;
+  padding: 15px;
   font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: rgba(13, 17, 23, 0.9);
   border: 2px solid rgba(255, 232, 31, 0.3);
   border-radius: 10px;
   color: var(--text-light);
   resize: vertical;
-  min-height: 200px;
   white-space: pre-wrap;
-  line-height: 1.5;
+  line-height: 1.4;
+  transition: all 0.3s ease;
 }
 
 .output-group textarea::placeholder {
   color: var(--text-muted);
+  font-style: italic;
 }
 
 .output-group textarea:focus {
@@ -234,6 +243,22 @@ body::before {
 /* Estilo quando há conteúdo */
 .output-group textarea:not(:placeholder-shown) {
   border-color: var(--success-color);
+}
+
+/* Tamanhos específicos para cada seção */
+#leaderOutput, #baseOutput {
+  min-height: 60px;
+  max-height: 80px;
+}
+
+#mainDeckOutput {
+  min-height: 300px;
+  max-height: 500px;
+}
+
+#sideboardOutput {
+  min-height: 150px;
+  max-height: 300px;
 }
 
 /* Estados de loading */
@@ -255,21 +280,38 @@ body::before {
 
 /* Botão de copiar */
 .copy-btn {
-  margin-top: 15px;
-  padding: 10px 20px;
+  margin-top: 10px;
+  padding: 8px 16px;
   background: rgba(255, 232, 31, 0.1);
   border: 1px solid var(--primary-color);
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--primary-color);
   cursor: pointer;
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
 .copy-btn:hover {
   background: rgba(255, 232, 31, 0.2);
   transform: translateY(-2px);
+}
+
+/* Grid responsivo para as seções */
+@media (min-width: 1024px) {
+  .output-sections {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "leader base"
+      "mainDeck mainDeck"
+      "sideboard sideboard";
+  }
+  
+  .output-group:nth-child(1) { grid-area: leader; }
+  .output-group:nth-child(2) { grid-area: base; }
+  .output-group:nth-child(3) { grid-area: mainDeck; }
+  .output-group:nth-child(4) { grid-area: sideboard; }
 }
 
 /* Footer */

@@ -53,12 +53,12 @@ export default function handler(req, res) {
                 })()
               : "";
 
-            // shuffledDeck é um array
+            // shuffledDeck é um array - separar deck principal do sideboard
             const deckSection =
               json.shuffledDeck
-                ?.filter((card) => card.count > 0 || card.sideboardCount > 0)
+                ?.filter((card) => card.count > 0)
                 .map((card) => {
-                  const count = card.count + (card.sideboardCount || 0);
+                  const count = card.count;
                   const name = card.card.cardName;
                   const title = card.card.title ? ` - ${card.card.title}` : "";
                   const number = Number(card.card.defaultCardNumber);
@@ -66,14 +66,29 @@ export default function handler(req, res) {
                 })
                 .join("\n") || "";
 
-            // Combinar todas as seções
-            const sections = [leaderSection, baseSection, deckSection].filter(
-              (section) => section.length > 0
-            );
-            const deckList = sections.join("\n");
+            // Sideboard separado
+            const sideboardSection =
+              json.shuffledDeck
+                ?.filter((card) => card.sideboardCount > 0)
+                .map((card) => {
+                  const count = card.sideboardCount;
+                  const name = card.card.cardName;
+                  const title = card.card.title ? ` - ${card.card.title}` : "";
+                  const number = Number(card.card.defaultCardNumber);
+                  return `${count} ${name}${title} (${number})`;
+                })
+                .join("\n") || "";
 
-            res.setHeader("Content-Type", "text/plain");
-            res.send(deckList);
+            // Retornar as seções separadas em JSON
+            const result = {
+              leader: leaderSection,
+              base: baseSection,
+              mainDeck: deckSection,
+              sideboard: sideboardSection
+            };
+
+            res.setHeader("Content-Type", "application/json");
+            res.json(result);
           } catch (e) {
             console.error(e);
             res.status(500).json({ error: "Erro ao processar o deck" });

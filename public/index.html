@@ -29,16 +29,62 @@
           ⚡ Converter para LIGA
         </button>
 
-        <div class="output-group">
-          <label for="output">📋 Resultado (Formato LIGA)</label>
-          <textarea
-            id="output"
-            readonly
-            placeholder="O deck convertido aparecerá aqui..."
-          ></textarea>
-          <button class="copy-btn" id="copyBtn" onclick="copiarResultado()" style="display: none;">
-            📄 Copiar para Clipboard
-          </button>
+        <div class="output-sections">
+          <!-- Líder -->
+          <div class="output-group">
+            <label for="leaderOutput">� Líder</label>
+            <textarea
+              id="leaderOutput"
+              readonly
+              placeholder="O líder aparecerá aqui..."
+              rows="2"
+            ></textarea>
+            <button class="copy-btn" id="copyLeaderBtn" onclick="copiarSecao('leaderOutput', 'copyLeaderBtn')" style="display: none;">
+              📄 Copiar Líder
+            </button>
+          </div>
+
+          <!-- Base -->
+          <div class="output-group">
+            <label for="baseOutput">🏛️ Base</label>
+            <textarea
+              id="baseOutput"
+              readonly
+              placeholder="A base aparecerá aqui..."
+              rows="2"
+            ></textarea>
+            <button class="copy-btn" id="copyBaseBtn" onclick="copiarSecao('baseOutput', 'copyBaseBtn')" style="display: none;">
+              📄 Copiar Base
+            </button>
+          </div>
+
+          <!-- Deck Principal -->
+          <div class="output-group">
+            <label for="mainDeckOutput">🃏 Deck Principal</label>
+            <textarea
+              id="mainDeckOutput"
+              readonly
+              placeholder="O deck principal aparecerá aqui..."
+              rows="12"
+            ></textarea>
+            <button class="copy-btn" id="copyMainDeckBtn" onclick="copiarSecao('mainDeckOutput', 'copyMainDeckBtn')" style="display: none;">
+              📄 Copiar Deck Principal
+            </button>
+          </div>
+
+          <!-- Sideboard -->
+          <div class="output-group">
+            <label for="sideboardOutput">🎯 Sideboard</label>
+            <textarea
+              id="sideboardOutput"
+              readonly
+              placeholder="O sideboard aparecerá aqui..."
+              rows="6"
+            ></textarea>
+            <button class="copy-btn" id="copySideboardBtn" onclick="copiarSecao('sideboardOutput', 'copySideboardBtn')" style="display: none;">
+              📄 Copiar Sideboard
+            </button>
+          </div>
         </div>
       </div>
 
@@ -51,23 +97,38 @@
     <script>
       async function converter() {
         const url = document.getElementById("deckUrl").value;
-        const output = document.getElementById("output");
-        const copyBtn = document.getElementById("copyBtn");
+        const leaderOutput = document.getElementById("leaderOutput");
+        const baseOutput = document.getElementById("baseOutput");
+        const mainDeckOutput = document.getElementById("mainDeckOutput");
+        const sideboardOutput = document.getElementById("sideboardOutput");
         const convertBtn = document.querySelector(".btn-convert");
         
+        // Botões de copiar
+        const copyBtns = [
+          "copyLeaderBtn", "copyBaseBtn", "copyMainDeckBtn", "copySideboardBtn"
+        ];
+        
         if (!url.trim()) {
-          output.value = "❌ Por favor, insira um link do deck SWUDB.";
-          output.classList.add("error");
+          leaderOutput.value = "❌ Por favor, insira um link do deck SWUDB.";
+          leaderOutput.classList.add("error");
           return;
         }
 
         // Mostrar estado de loading
-        output.value = "⚡ Carregando... Processando deck...";
-        output.classList.remove("error");
-        output.classList.add("loading");
+        const loadingText = "⚡ Carregando...";
+        [leaderOutput, baseOutput, mainDeckOutput, sideboardOutput].forEach(output => {
+          output.value = loadingText;
+          output.classList.remove("error");
+          output.classList.add("loading");
+        });
+        
         convertBtn.disabled = true;
         convertBtn.textContent = "⚡ Convertendo...";
-        copyBtn.style.display = "none";
+        
+        // Esconder todos os botões de copiar
+        copyBtns.forEach(btnId => {
+          document.getElementById(btnId).style.display = "none";
+        });
 
         try {
           const res = await fetch(
@@ -78,12 +139,24 @@
             throw new Error("Erro na requisição");
           }
 
-          const text = await res.text();
+          const data = await res.json();
           
-          // Mostrar resultado com sucesso
-          output.value = text;
-          output.classList.remove("loading", "error");
-          copyBtn.style.display = "inline-block";
+          // Preencher cada seção
+          leaderOutput.value = data.leader || "Nenhum líder encontrado";
+          baseOutput.value = data.base || "Nenhuma base encontrada";
+          mainDeckOutput.value = data.mainDeck || "Nenhuma carta encontrada";
+          sideboardOutput.value = data.sideboard || "Nenhuma carta no sideboard";
+          
+          // Remover estado de loading
+          [leaderOutput, baseOutput, mainDeckOutput, sideboardOutput].forEach(output => {
+            output.classList.remove("loading", "error");
+          });
+          
+          // Mostrar botões de copiar para seções que têm conteúdo
+          if (data.leader) document.getElementById("copyLeaderBtn").style.display = "inline-block";
+          if (data.base) document.getElementById("copyBaseBtn").style.display = "inline-block";
+          if (data.mainDeck) document.getElementById("copyMainDeckBtn").style.display = "inline-block";
+          if (data.sideboard) document.getElementById("copySideboardBtn").style.display = "inline-block";
           
           // Feedback visual de sucesso
           convertBtn.textContent = "✅ Convertido com sucesso!";
@@ -93,19 +166,23 @@
           }, 2000);
           
         } catch (err) {
-          output.value = "❌ Erro ao converter o deck. Verifique se o link está correto e tente novamente.";
-          output.classList.remove("loading");
-          output.classList.add("error");
+          const errorText = "❌ Erro ao converter o deck. Verifique se o link está correto e tente novamente.";
+          [leaderOutput, baseOutput, mainDeckOutput, sideboardOutput].forEach(output => {
+            output.value = errorText;
+            output.classList.remove("loading");
+            output.classList.add("error");
+          });
+          
           convertBtn.textContent = "⚡ Converter para LIGA";
           convertBtn.disabled = false;
         }
       }
 
-      async function copiarResultado() {
-        const output = document.getElementById("output");
-        const copyBtn = document.getElementById("copyBtn");
+      async function copiarSecao(outputId, btnId) {
+        const output = document.getElementById(outputId);
+        const copyBtn = document.getElementById(btnId);
         
-        if (!output.value || output.value.includes("Erro") || output.value.includes("Carregando")) {
+        if (!output.value || output.value.includes("Erro") || output.value.includes("Carregando") || output.value.includes("Nenhum")) {
           return;
         }
         
@@ -144,11 +221,22 @@
 
       // Limpar mensagem de erro ao digitar
       document.getElementById("deckUrl").addEventListener("input", function() {
-        const output = document.getElementById("output");
-        if (output.classList.contains("error")) {
-          output.classList.remove("error");
-          output.value = "O deck convertido aparecerá aqui...";
-        }
+        const outputs = [
+          document.getElementById("leaderOutput"),
+          document.getElementById("baseOutput"),
+          document.getElementById("mainDeckOutput"),
+          document.getElementById("sideboardOutput")
+        ];
+        
+        outputs.forEach(output => {
+          if (output.classList.contains("error")) {
+            output.classList.remove("error");
+            if (output.id === "leaderOutput") output.value = "O líder aparecerá aqui...";
+            else if (output.id === "baseOutput") output.value = "A base aparecerá aqui...";
+            else if (output.id === "mainDeckOutput") output.value = "O deck principal aparecerá aqui...";
+            else if (output.id === "sideboardOutput") output.value = "O sideboard aparecerá aqui...";
+          }
+        });
       });
     </script>
   </body>
